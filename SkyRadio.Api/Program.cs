@@ -3,15 +3,30 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Serilog;
 using SkyRadio.Api.Hubs;
 using SkyRadio.Application;
 using SkyRadio.Application.Models;
 using SkyRadio.Domain.Commons;
-using SkyRadio.Persistence;
 using System.Text;
 
+
+Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+            .WriteTo.File(
+                    @$"C:/SkyRadio/Api_Log-{DateTime.Now.ToString("d")}.txt",
+                    fileSizeLimitBytes: 1_000_000,
+                    rollOnFileSizeLimit: true,
+                    shared: true,
+                    flushToDiskInterval: TimeSpan.FromSeconds(1))
+            .CreateBootstrapLogger();
 try
 {
+    Log.Information("SkyRadio application started...");
+
     var builder = WebApplication.CreateBuilder(args);
 
     // Add services to the container.
@@ -156,9 +171,9 @@ try
 }
 catch (Exception ex)
 {
-    //TODO: use serilog to log
+    Log.Fatal(ex,"Application terminated unexpedtedly");
 }
 finally
 {
-    //TODO: flush.
+    Log.CloseAndFlush();
 }

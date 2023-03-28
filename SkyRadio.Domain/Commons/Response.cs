@@ -24,6 +24,12 @@ public class Response<TData>
         Data = data;
     }
 
+    public Response(TData? data, string? message)
+    {
+        Data = data;
+        Message = message;
+    }
+
     public Response(bool isSucceed, TData? data, string? message)
     {
         IsSucceed = isSucceed;
