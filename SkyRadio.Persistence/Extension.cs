@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SkyRadio.Persistence.Contexts;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Identity.Client;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace SkyRadio.Persistence
 {
@@ -21,6 +25,9 @@ namespace SkyRadio.Persistence
                     server => server.MigrationsAssembly(typeof(SkyRadioIdentityDbContext).Assembly.FullName));
             });
 
+            services.AddDefaultIdentity<IdentityUser>()
+               .AddEntityFrameworkStores<SkyRadioIdentityDbContext>()
+               .AddDefaultTokenProviders();
 
             return services;
         }
