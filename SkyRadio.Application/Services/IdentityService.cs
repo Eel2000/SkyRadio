@@ -76,6 +76,6 @@ public class IdentityService : IIdentityService
             throw new ApplicationException("Failed to register " + @string);
         }
 
-        return new Response<dynamic>("Account created successfully.");
+        return new Response<dynamic>(isSucceed:true,"Account created successfully.");
     }
 }

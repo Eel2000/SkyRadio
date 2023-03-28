@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SkyRadio.Application.DTOs.Identity;
 using SkyRadio.Application.Features.Identity.Commands;
 
 namespace SkyRadio.Api.Controllers.v1
@@ -17,11 +18,11 @@ namespace SkyRadio.Api.Controllers.v1
         }
 
         [HttpPost("register-user")]
-        public async Task<IActionResult> RegisterUseAsyn([FromBody] RegistrationCommand command)
-            => Ok(await _mediator.Send(command));
+        public async Task<IActionResult> RegisterUseAsyn([FromBody] RegistrationRequest request)
+            => Ok(await _mediator.Send(new RegistrationCommand { RegistrationRequest = request }));
 
         [HttpPost("authenticate")]
-        public async Task<IActionResult> AuthenticationUserAsync([FromBody] AuthenticationCommand command)
-            => Ok(await _mediator.Send(command));
+        public async Task<IActionResult> AuthenticationUserAsync([FromBody] AuthenticationRequest request)
+            => Ok(await _mediator.Send(new AuthenticationCommand { Authentication = request }));
     }
 }

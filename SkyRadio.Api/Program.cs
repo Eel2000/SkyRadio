@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Serilog;
+using SkyRadio.Api.Extensions;
 using SkyRadio.Api.Hubs;
 using SkyRadio.Application;
 using SkyRadio.Application.Models;
@@ -69,9 +70,9 @@ try
             ValidateAudience = true,
             ValidateLifetime = true,
             ClockSkew = TimeSpan.Zero,
-            ValidIssuer = builder.Configuration[$"JwtConfiguration:Issuer"],
-            ValidAudience = builder.Configuration[$"JwtConfiguration:Issuer"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTParameters:Key"]))
+            ValidIssuer = jwtParams.Issuer,
+            ValidAudience = jwtParams.Issuer,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtParams.Key))
         };
 
         jwtOptions.Events = new JwtBearerEvents()
@@ -157,6 +158,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.ConfigureExceptionHandler();
 
     app.UseHttpsRedirection();
 

@@ -10,7 +10,7 @@ namespace SkyRadio.Application.DTOs.Identity
     public class RegistrationRequest
     {
         [Required(ErrorMessage ="Please specify the username")]
-        [StringLength(6, ErrorMessage ="Must have at least 6 characters")]
+        [MinLength(5, ErrorMessage ="Must have at least 6 characters")]
         [MaxLength(255, ErrorMessage ="Please ensure the chars are not out of required length")]
         public string Username { get; set; }
 
