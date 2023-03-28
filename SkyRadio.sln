@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Api", "SkyRadio.Api\SkyRadio.Api.csproj", "{A8090AEB-DC4A-4A70-9B58-8997998FE400}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Api", "SkyRadio.Api\SkyRadio.Api.csproj", "{A8090AEB-DC4A-4A70-9B58-8997998FE400}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{C4CF4FCB-DC60-41F2-97C3-1EDD80A73E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Persistence", "SkyRadio.Persistence\SkyRadio.Persistence.csproj", "{334FAFF0-AF68-4009-A1B9-E69E446BE4FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Persistence", "SkyRadio.Persistence\SkyRadio.Persistence.csproj", "{334FAFF0-AF68-4009-A1B9-E69E446BE4FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Application", "SkyRadio.Application\SkyRadio.Application.csproj", "{484A37E1-00CA-496E-8694-46A3898C4232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Application", "SkyRadio.Application\SkyRadio.Application.csproj", "{484A37E1-00CA-496E-8694-46A3898C4232}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6C5E5C8D-558E-4E66-AA90-9DC13E2D4C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Domain", "SkyRadio.Domain\SkyRadio.Domain.csproj", "{076BF5C1-19FE-464F-90D4-69A74B97330A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Domain", "SkyRadio.Domain\SkyRadio.Domain.csproj", "{076BF5C1-19FE-464F-90D4-69A74B97330A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{C3F2BB7F-D4F6-45E6-9596-0FA17E87E619}"
 EndProject
@@ -34,6 +34,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{95A3288A-1CD3-43E1-AB42-5FB12EC09EF9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{EACF0950-980D-4950-BF5E-F366EB7A650C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.Host", "SkyRadio.Client.Host\SkyRadio.Client.Host.csproj", "{B5BE6168-F0DF-4A27-986E-18BA2227AB42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.User", "SkyRadio.Client.User\SkyRadio.Client.User.csproj", "{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,18 @@ Global
 		{076BF5C1-19FE-464F-90D4-69A74B97330A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{076BF5C1-19FE-464F-90D4-69A74B97330A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076BF5C1-19FE-464F-90D4-69A74B97330A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +91,8 @@ Global
 		{28A2A82A-4071-4159-A33A-30EF29274502} = {31D4ECE6-A05D-45DE-85B9-C93C12F9FCB8}
 		{95A3288A-1CD3-43E1-AB42-5FB12EC09EF9} = {624F2A30-4BEC-446E-869E-73AD66AD10E3}
 		{EACF0950-980D-4950-BF5E-F366EB7A650C} = {624F2A30-4BEC-446E-869E-73AD66AD10E3}
+		{B5BE6168-F0DF-4A27-986E-18BA2227AB42} = {A98AE94E-71B6-4506-86EC-228F16EB8871}
+		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225} = {28A2A82A-4071-4159-A33A-30EF29274502}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D229B688-93BC-4CEC-B6AB-FC98C1698470}
