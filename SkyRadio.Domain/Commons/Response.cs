@@ -20,21 +20,22 @@ public class Response<TData>
 
     public Response(bool isSucceed, TData? data)
     {
-        IsSucceed = isSucceed;
         Data = data;
+        IsSucceed = isSucceed;
     }
 
     public Response(TData? data, string? message)
     {
         Data = data;
+        IsSucceed = true;
         Message = message;
     }
 
     public Response(bool isSucceed, TData? data, string? message)
     {
-        IsSucceed = isSucceed;
         Data = data;
         Message = message;
+        IsSucceed = isSucceed;
     }
 
     public bool IsSucceed { get; set; }

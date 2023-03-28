@@ -13,6 +13,7 @@ namespace SkyRadio.Application
         {
             services.AddMediatR(service => service.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 
+            services.AddTransient<IChannelService, ChannelService>();
             services.AddTransient<IIdentityService, IdentityService>();
             services.AddScoped<ITokenProviderService, TokenProviderService>();
 
