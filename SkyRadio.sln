@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.Host", "Sky
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.User", "SkyRadio.Client.User\SkyRadio.Client.User.csproj", "{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6E68777E-8488-47D8-99BD-F7F40596609F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.Identity", "SkyRadio.Client.Identity\SkyRadio.Client.Identity.csproj", "{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,10 @@ Global
 		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,8 @@ Global
 		{EACF0950-980D-4950-BF5E-F366EB7A650C} = {624F2A30-4BEC-446E-869E-73AD66AD10E3}
 		{B5BE6168-F0DF-4A27-986E-18BA2227AB42} = {A98AE94E-71B6-4506-86EC-228F16EB8871}
 		{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225} = {28A2A82A-4071-4159-A33A-30EF29274502}
+		{6E68777E-8488-47D8-99BD-F7F40596609F} = {C3F2BB7F-D4F6-45E6-9596-0FA17E87E619}
+		{A3A7A9F9-535C-4731-B461-60CDB4B3F82B} = {6E68777E-8488-47D8-99BD-F7F40596609F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D229B688-93BC-4CEC-B6AB-FC98C1698470}
