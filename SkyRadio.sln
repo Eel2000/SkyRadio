@@ -35,13 +35,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{95A3288A-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{EACF0950-980D-4950-BF5E-F366EB7A650C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.Host", "SkyRadio.Client.Host\SkyRadio.Client.Host.csproj", "{B5BE6168-F0DF-4A27-986E-18BA2227AB42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Client.Host", "SkyRadio.Client.Host\SkyRadio.Client.Host.csproj", "{B5BE6168-F0DF-4A27-986E-18BA2227AB42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.User", "SkyRadio.Client.User\SkyRadio.Client.User.csproj", "{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Client.User", "SkyRadio.Client.User\SkyRadio.Client.User.csproj", "{4234C2F5-3A5A-49EE-AEA3-60B3BCF4F225}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6E68777E-8488-47D8-99BD-F7F40596609F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyRadio.Client.Identity", "SkyRadio.Client.Identity\SkyRadio.Client.Identity.csproj", "{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyRadio.Client.Identity", "SkyRadio.Client.Identity\SkyRadio.Client.Identity.csproj", "{A3A7A9F9-535C-4731-B461-60CDB4B3F82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
