@@ -71,7 +71,7 @@ try
             ValidateLifetime = true,
             ClockSkew = TimeSpan.Zero,
             ValidIssuer = jwtParams.Issuer,
-            ValidAudience = jwtParams.Issuer,
+            ValidAudience = jwtParams.Audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtParams.Key))
         };
 
@@ -83,7 +83,7 @@ try
                 context.Response.ContentType = "application/json";
 
                 var result =
-                    JsonConvert.SerializeObject(new Response<string>("Authentification has failed, please try with correct credentials."));
+                    JsonConvert.SerializeObject(new Response<Exception>(context.Exception, "Authentification has failed, please try with correct credentials."));
 
                 return context.Response.WriteAsync(result);
             },
@@ -98,7 +98,7 @@ try
                 }
 
                 var result =
-                    JsonConvert.SerializeObject(new Response<string>("Not authorized to access this ressource."));
+                    JsonConvert.SerializeObject(new Response<string>("Not authorized to access this ressource.\n" + context.Error));
 
                 return context.Response.WriteAsync(result);
             },
@@ -163,8 +163,8 @@ try
 
     app.UseHttpsRedirection();
 
-    app.UseAuthorization();
     app.UseAuthentication();
+    app.UseAuthorization();
 
     app.MapHub<SkyRadioLiveHub>("radio/live");
 
@@ -174,7 +174,7 @@ try
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex,"Application terminated unexpedtedly");
+    Log.Fatal(ex, "Application terminated unexpedtedly");
 }
 finally
 {
