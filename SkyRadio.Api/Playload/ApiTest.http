@@ -1,0 +1,9 @@
+###
+POST https://localhost:7206/api/v1/Idenity/Auth/authenticate
+Accept: application/json, text/plain
+Content-Type: application/json
+
+{
+    "username":"string",
+    "password":"string"
+}

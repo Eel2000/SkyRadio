@@ -25,4 +25,8 @@
     <ProjectReference Include="..\SkyRadio.Application\SkyRadio.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Playload\" />
+  </ItemGroup>
+
 </Project>
