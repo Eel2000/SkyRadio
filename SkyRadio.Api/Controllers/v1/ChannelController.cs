@@ -9,10 +9,10 @@ using SkyRadio.Domain.Entities;
 
 namespace SkyRadio.Api.Controllers.v1
 {
+    [Authorize]
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version}/Radio/[controller]")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ChannelController : ControllerBase
     {
         private readonly IMediator _mediator;
