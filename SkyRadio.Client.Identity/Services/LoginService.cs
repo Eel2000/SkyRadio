@@ -33,7 +33,7 @@ namespace SkyRadio.Client.Identity.Services
                 {
                     var  json = await result.Content.ReadAsStringAsync();
                     var response = JsonSerializer.Deserialize<Response<object>>(json);
-                    
+                        
                 }
                 else
                 {
