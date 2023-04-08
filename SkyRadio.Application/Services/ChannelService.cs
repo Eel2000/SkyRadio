@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SkyRadio.Application.DTOs.Channels;
 using SkyRadio.Application.Interfaces.Services;
 using SkyRadio.Application.Mappings;
@@ -11,14 +12,23 @@ namespace SkyRadio.Application.Services;
 public class ChannelService : IChannelService
 {
     private readonly SkyRadioDbContext _context;
+    private readonly ILogger<ChannelService> _logger;
 
-    public ChannelService(SkyRadioDbContext context)
+    public ChannelService(SkyRadioDbContext context, ILogger<ChannelService> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     public async ValueTask<Response<object>> CreateAsync(ChannelDto channel)
     {
+
+        if (await _context.Channels.AnyAsync(x => x.Name.ToLower() == channel.Name.ToLower()))
+        {
+            _logger.LogError("Channel name already taken");
+            throw new OperationCanceledException("This channel name is already taken");
+        }
+
         var mapper = new ChannelMapper();
         var chnl = mapper.Map(channel);
 
@@ -33,6 +43,7 @@ public class ChannelService : IChannelService
 
         await _context.SaveChangesAsync();
 
+        _logger.LogInformation("new channel created");
         return new Response<object>(isSucceed: true, "Channel created");
     }
 
